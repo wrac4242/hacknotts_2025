@@ -1,2 +1,2 @@
 automatic setups
-filesystem permission changes - make the home dir of people read only
+presetup - background_scripts user

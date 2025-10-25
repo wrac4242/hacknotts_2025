@@ -17,7 +17,7 @@ def on_new_client(client_socket, addr):
 				break
 			print(f"{addr} >> {data}")
 			if data.startswith(CURRENT_PW) and len(data) <= len(CURRENT_PW) + 1:
-				client_socket.send(b"Correct, the next password is: " + NEXT_PW + b"\n")
+				client_socket.send(f"Correct, the next password is: {NEXT_PW}\n".encode())
 				break
 			else:
 				client_socket.send(b"Wrong Password\n") # echo
