@@ -1,2 +1,3 @@
 automatic setups
-presetup - background_scripts user
+
+documentation - e.g. where to find current user passwords

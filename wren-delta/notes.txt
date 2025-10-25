@@ -1,1 +1,11 @@
 sql injection 
+
+can create read only database - write to it then 
+`sqlite3 -init create.sql auction.db .quit`
+
+
+https://unix.stackexchange.com/a/34294
+blocking reading the content? 
+
+
+Known working - `' OR (1=1);--`
