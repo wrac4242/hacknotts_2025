@@ -11,7 +11,7 @@ if [ -f "lookup-project/lookup" ]; then
 fi
 
 #compile the project
-gcc -o lookup-project/lookup lookup-project/lockup.c
+gcc -o lookup-project/lookup lookup-project/lookup.c
 # set up the permission
 chown "$user" lookup-project/lookup
 chmod u+s lookup-project/lookup

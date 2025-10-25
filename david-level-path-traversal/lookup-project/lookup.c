@@ -7,7 +7,7 @@ int main() {
 
     // find the user's flower choice
     char query[2048]; // TODO: do we need such a big buffer?
-    print("Enter flower name for lookup: ");
+    printf("Enter flower name for lookup: ");
     scanf("%s", &query);
 
     //read the file
