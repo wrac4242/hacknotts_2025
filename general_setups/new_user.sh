@@ -4,7 +4,8 @@
 
 
 if [ -v "$3" ] && [ "$3" == 1 ]; then
-    userdel -r "$1"
+#piped to null to stop it complaining about missing mail spools
+    userdel -r "$1" > /dev/null
     rm /hacknotts/secrets/"$1"_password
 
 
