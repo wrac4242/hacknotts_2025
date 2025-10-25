@@ -3,7 +3,6 @@
 user="david1"
 pwd="david1"
 
-echo "$user"
 ../general_setups/new_user.sh "$user" "$pwd"
 
 # This file compiles the faulty c program and sets the suid bit to the correct user
