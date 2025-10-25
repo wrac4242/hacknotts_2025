@@ -6,6 +6,7 @@ echo "$user"
 ../general_setups/new_user.sh "$user" "$pwd"
 
 gcc database_query.c -o next_password_generator
+rm people.db
 sqlite3 -init db_init.sql people.db .quit
 
 # need to move over, dbquery.py, the compiled generator, the db itself
