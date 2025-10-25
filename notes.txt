@@ -1,0 +1,4 @@
+Notes:
+chattr - write protect using system immutable flags
+
+each level is own homedir 
