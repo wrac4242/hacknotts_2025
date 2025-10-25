@@ -19,7 +19,7 @@ mv next_password_generator /home/$user/
 mv people.db /home/$user/
 
 chown $next_user:$next_user /home/$user/dbquery.py /home/$user/next_password_generator
-chmod 500 /home/$user/dbquery.py
+chmod 550 /home/$user/dbquery.py
 chmod 555 /home/$user/next_password_generator
 
 chmod g+s /home/$user/next_password_generator

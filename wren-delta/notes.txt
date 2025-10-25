@@ -1,3 +1,8 @@
 sql injection tldr
 
 Known working - `' OR (1=1);--`
+
+run ./next_password_generator, which only gives the password if you are seen as an admin
+sqlite3 is used for the database
+
+it is intentional you cannot read the contents of dbquery.py
