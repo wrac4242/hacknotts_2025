@@ -21,4 +21,4 @@ sudo chown "$user:$user" lookup-project/lookup
 sudo chmod 101 lookup-project/lookup
 sudo chmod u+s lookup-project/lookup
 
-cp lookup-project /home/"$user"/
+cp -r lookup-project /home/"$user"/

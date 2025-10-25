@@ -12,7 +12,7 @@ PORT = 12345  # Port to listen on (non-privileged ports are > 1023)
 CURRENT_PW = "wren-charlie".encode("utf-8")
 NEXT_PW = "wren-charlie-next"
 
-PATH_TO_WATCH = "./temp/"
+PATH_TO_WATCH = "/tmp/listening_to_you"
 
 pending_files = {} # datatype stored: filename -> {event: event, permissions_right: bool}, set perms, then set event
 

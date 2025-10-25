@@ -12,7 +12,13 @@ readarray -t files <<<"$file_list"
 for file in "${files[@]}"
 do
     dir=$(dirname "$file")
+    chmod +x $file
     cd "$dir" || return
     ./setup.sh
     
 done
+
+# Remove MOTDs 
+chmod -R 0644 /etc/update-motd.d/
+
+# Add any MOTD updates?
