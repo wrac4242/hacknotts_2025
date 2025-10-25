@@ -1,0 +1,10 @@
+Password: wren-alpha
+Next Password: wren-alpha-next
+
+Notes:
+Demo Level - Service listening 
+Service listening on port 654321 - on each connection 
+listens for current user password if correct then echoes back next password
+
+Setup:
+get listening script to start running - make sure its passwords are correct 
