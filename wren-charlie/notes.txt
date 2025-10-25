@@ -1,0 +1,11 @@
+Password: wren-alpha
+Next Password: wren-alpha-next
+
+Notes:
+Demo Level - Service listening 
+Service listening on port 12345 - on each connection 
+listens for current user password if correct then 
+gives a file and a string to place into that file, in a way that no other user can read it
+
+Setup:
+get listening script to start running - make sure its passwords are correct 
