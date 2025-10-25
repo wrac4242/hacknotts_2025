@@ -7,7 +7,7 @@ NEXT_USER = "wren-alpha"
 con = sqlite3.connect("people.db")
 cur = con.cursor()
 
-users_name = input("What is your name: ").strip()
+users_name = input("Only admins can access the next password\nUsername: ").strip()
 
 if "root" in users_name:
     print("Not that easy")
@@ -22,11 +22,9 @@ if admin == None:
 print(admin)
 
 if admin:
-	print("admin")
+	with open(f'/hacknotts/secrets/{NEXT_USER}_password', 'r') as f:
+		print("Congrats! The next password is: "+f.read())
 else:
-	print("not admin")
+	print("Sorry, you are not an admin")
 
-# get password
-#with open(f'/hacknotts/secrets/{NEXT_USER}_password', 'r') as f:
-#	print(f.read())
 
