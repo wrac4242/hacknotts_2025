@@ -1,30 +1,37 @@
 
 
 #include <stdio.h>
+#include <unistd.h>
 
-int main() {
+int main(int argc, char **argv) {
+
+    if (argc<2) {
+        printf("Flower lookup utility\nusage ./lookup {flower} \n");
+        return 0;
+    }
 
 
-    char query[2048]; // TODO: do we need such a big buffer?
-    printf("Enter flower name for lookup: ");
-    scanf("%s", &query);
 
     //read the file
 
-    char filename[2048];
-    sprintf(filename, "flowers/%s",query);
+    char filename[1024];
+    sprintf(filename, "flowers/%s",argv[1]);
 
     char file_content[2048];
 
     FILE *flower_file = fopen(filename,"r");
 
     if (! flower_file) {
-        printf("flower not found!");
+        printf("flower not found!\n");
         return -1;
-    }
-    fgets(file_content, 2048, flower_file);
 
-    printf("%s",file_content);
+    }
+    while (fgets(file_content, 2048, flower_file)){
+        printf("%s\n",file_content);
+    }
+
+
+
 
     fclose(flower_file);
 
