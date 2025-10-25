@@ -3,15 +3,18 @@ import socket
 from threading import Thread, Event
 import time
 import random
-# from waiting import wait
+from inotify_simple import INotify, flags
+import os
+import string
 
 HOST = "127.0.0.1"  # Standard loopback interface address (localhost)
 PORT = 12345  # Port to listen on (non-privileged ports are > 1023)
 CURRENT_PW = "wren-charlie".encode("utf-8")
-NEXT_PW = "wren-charlie-next".encode("utf-8")
+NEXT_PW = "wren-charlie-next"
 
+PATH_TO_WATCH = "./temp/"
 
-event = Event()
+pending_files = {} # datatype stored: filename -> {event: event, permissions_right: bool}, set perms, then set event
 
 def on_new_client(client_socket, addr):
 	try:
@@ -23,20 +26,47 @@ def on_new_client(client_socket, addr):
 			if not (data.startswith(CURRENT_PW) and len(data) <= len(CURRENT_PW) + 1):
 				client_socket.send(b"Wrong Password! Bye bye!\n") # echo
 			else:
-				#wait(lambda: condition == True, timeout_seconds=120, waiting_for="Timeout")
-				event.wait()
-				client_socket.send(b"Buh bai")
+				filename = ''.join(random.choices(string.ascii_uppercase + string.digits, k=6))
+				event = Event()
+				to_add = {"event": event, "permissions_right": False}
+				pending_files[filename] = to_add
+				client_socket.send(f"Create the file {PATH_TO_WATCH}{filename} so it isnt accessible to another user\n".encode())
+				if event.wait(15): # sent
+					if pending_files[filename]["permissions_right"]:
+						client_socket.send(f"The next password is {NEXT_PW}\n".encode())
+					else:
+						client_socket.send(f"The file was created with permissions so everyone can read! Try again\n".encode())
+				else:
+					client_socket.send(b"Too slow!\n")
 	finally:
 		client_socket.shutdown(socket.SHUT_RDWR)
 		client_socket.close()
 		print("Closing socket")
 
 def the_watcher():
-    
-    time.sleep(10)
-    event.set()
-    print("timeout")
-    return 
+	# testing program to demonstrate filesystem inotify
+	inotify = INotify()
+	watch_flags = flags.CREATE | flags.MOVED_TO | flags.MODIFY 
+	wd = inotify.add_watch(PATH_TO_WATCH, watch_flags)
+
+	while True:
+		for event in inotify.read(timeout=200):
+			print(event)
+			for flag in flags.from_mask(event.mask):
+				print('    ' + str(flag))
+			# check if file has specific permission
+			status = os.stat(PATH_TO_WATCH + event.name)
+			
+			print("Readable" if status.st_mode & 0o004 else "not readable" )
+			if event.name in pending_files:
+				print("in dict")
+				pending_files[event.name]["permissions_right"] = not (status.st_mode & 0o004)
+				pending_files[event.name]["event"].set()
+			else:
+				print("not in dict")
+			# clean file out
+			print(pending_files)
+
 
 def main():
 
