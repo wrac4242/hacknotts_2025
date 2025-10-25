@@ -5,7 +5,7 @@ from threading import Thread
 HOST = "127.0.0.1"  # Standard loopback interface address (localhost)
 PORT = 65432  # Port to listen on (non-privileged ports are > 1023)
 CURRENT_PW = "wren-alpha".encode("utf-8")
-NEXT_PW = "wren-alpha-next"
+NEXT_PW = "wren-bravo"
 
 def on_new_client(client_socket, addr):
 	retry_count = 8

@@ -7,7 +7,7 @@ import random
 HOST = "127.0.0.1"  # Standard loopback interface address (localhost)
 PORT = 54321  # Port to listen on (non-privileged ports are > 1023)
 CURRENT_PW = "wren-bravo".encode("utf-8")
-NEXT_PW = "wren-bravo-next".encode("utf-8")
+NEXT_PW = "wren-charlie".encode("utf-8")
 
 moves = ["rock", "paper", "scissors"]
 

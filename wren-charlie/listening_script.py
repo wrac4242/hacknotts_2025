@@ -10,7 +10,7 @@ import string
 HOST = "127.0.0.1"  # Standard loopback interface address (localhost)
 PORT = 12345  # Port to listen on (non-privileged ports are > 1023)
 CURRENT_PW = "wren-charlie".encode("utf-8")
-NEXT_PW = "wren-charlie-next"
+NEXT_PW = "wren-delta"
 
 PATH_TO_WATCH = "/tmp/listening_to_you"
 

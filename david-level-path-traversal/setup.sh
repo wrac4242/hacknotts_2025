@@ -1,7 +1,9 @@
 #! /bin/bash
 #put the user of the next level here
-user="david1"
-pwd="david1"
+user="pathing"
+pwd="pathing"
+
+nxtUser="wren-alpha"
 
 ../general_setups/new_user.sh "$user" "$pwd"
 
@@ -16,7 +18,7 @@ fi
 
 # set up the permission
 echo "setup perms"
-sudo chown "$user:$user" lookup-project/lookup
+sudo chown "$nxtUser:$nxtUser" lookup-project/lookup
 sudo chmod 101 lookup-project/lookup
 sudo chmod u+s lookup-project/lookup
 
