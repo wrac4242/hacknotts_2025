@@ -1,3 +1,2 @@
-user setups - automatic
-
 automatic setups
+filesystem permission changes - make the home dir of people read only
