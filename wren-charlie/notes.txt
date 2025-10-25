@@ -19,7 +19,6 @@ when connected and pw submitted, it gives back a path to create for a file that 
 and some content to place into it(?)
 
 setup: https://pypi.org/project/inotify-simple/ install - inotify-simple
-https://pypi.org/project/waiting/ - waiting
 
 todo:
 cleanup 
