@@ -2,7 +2,7 @@ Password: wren-bravo
 Next Password: wren-bravo-next
 
 Notes:
-Demo Level - Service listening 
+Demo Level - Automation / scripting
 Service listening on port 54321 - on each connection 
 listens for current user password, then plays RPS against the user
 the user has to submit back the best move, ["rock", "paper", "scissors"]

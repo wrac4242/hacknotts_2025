@@ -9,3 +9,17 @@ gives a file and a string to place into that file, in a way that no other user c
 
 Setup:
 get listening script to start running - make sure its passwords are correct 
+
+
+Notes:
+Demo Level - permissions of newly created files and readability
+
+Service listening on port 12345
+when connected and pw submitted, it gives back a path to create for a file that other users cannot read 
+and some content to place into it(?)
+
+setup: https://pypi.org/project/inotify-simple/ install - inotify-simple
+https://pypi.org/project/waiting/ - waiting
+
+todo:
+cleanup 

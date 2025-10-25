@@ -1,35 +1,42 @@
 import socket
 
-from threading import Thread
+from threading import Thread, Event
+import time
+import random
+# from waiting import wait
 
 HOST = "127.0.0.1"  # Standard loopback interface address (localhost)
-PORT = 65432  # Port to listen on (non-privileged ports are > 1023)
-CURRENT_PW = "wren-alpha".encode("utf-8")
-NEXT_PW = "wren-alpha-next"
+PORT = 12345  # Port to listen on (non-privileged ports are > 1023)
+CURRENT_PW = "wren-charlie".encode("utf-8")
+NEXT_PW = "wren-charlie-next".encode("utf-8")
+
+
+event = Event()
 
 def on_new_client(client_socket, addr):
-	retry_count = 8
 	try:
-		while True:
-			client_socket.send(b"Current Password: ")
-			data = client_socket.recv(1024)#.decode('utf-8')
-			if not data:
-				break
+		# Check password
+		client_socket.send(b"Current Password: ")
+		data = client_socket.recv(1024)#.decode('utf-8')
+		if data:
 			print(f"{addr} >> {data}")
-			if data.startswith(CURRENT_PW) and len(data) <= len(CURRENT_PW) + 1:
-				client_socket.send(b"Correct, the next password is: " + NEXT_PW + b"\n")
-				break
+			if not (data.startswith(CURRENT_PW) and len(data) <= len(CURRENT_PW) + 1):
+				client_socket.send(b"Wrong Password! Bye bye!\n") # echo
 			else:
-				client_socket.send(b"Wrong Password\n") # echo
-				retry_count -= 1
-				if retry_count == 0:
-					client_socket.send(b"Too many failed attempts! Bye bye!\n")
-					break
+				#wait(lambda: condition == True, timeout_seconds=120, waiting_for="Timeout")
+				event.wait()
+				client_socket.send(b"Buh bai")
 	finally:
 		client_socket.shutdown(socket.SHUT_RDWR)
 		client_socket.close()
 		print("Closing socket")
 
+def the_watcher():
+    
+    time.sleep(10)
+    event.set()
+    print("timeout")
+    return 
 
 def main():
 
@@ -39,6 +46,9 @@ def main():
 
 	s.listen(5)  # wait for new connections
 	threads = []
+	watcher = Thread(target=the_watcher)
+	watcher.start()
+	threads.append(watcher)
 	try:
 		while True:
 			c, addr = s.accept()  # Establish connection with client.
