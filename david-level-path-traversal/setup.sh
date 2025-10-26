@@ -21,6 +21,6 @@ fi
 cp -r lookup-project/* /home/$user/
 
 echo "setup perms"
-chown "$nxtUser:$nxtUser" /home/$user/lookup
+chown $nxtUser:$nxtUser /home/$user/lookup
 chmod 555 /home/$user/lookup
 chmod g+s /home/$user/lookup

@@ -31,3 +31,4 @@ deluser --remove-home background_scripts
 rm -rf /home/background_scripts
 
 rm -rf /tmp/listening_to_you
+rm -rf /hacknotts
