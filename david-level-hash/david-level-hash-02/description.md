@@ -1,6 +1,6 @@
 # hash crack 2
 
-The password for the next level has been hashed plus salt and put in a file.
+A word + the salt are used as the password for the next level, and hashed (sha1).
 
 Useful tools:
 sha1sum, python's hashlib
