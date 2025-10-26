@@ -8,7 +8,9 @@ with open("dictionary","r") as f:
     for word in f.readlines():
         word = word.strip("\n")
 
-        hash =hashlib.sha1((word+salt).encode()).hexdigest()
+        hash =hashlib.sha1((word+salt).encode(),usedforsecurity=False).hexdigest()
+        print(hash)
+        print(word+salt)
 
         if hash == target:
             print(word+salt)
