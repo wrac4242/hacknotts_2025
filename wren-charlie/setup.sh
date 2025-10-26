@@ -5,8 +5,8 @@ chown background_scripts:background_scripts /home/background_scripts/scripts/wre
 
 echo "pip install inotify-simple --break-system-packages" >> /home/background_scripts/prerunning.sh
 
-user="wren-charlie"
-pwd="wren-charlie"
+user="temp08"
+pwd="EmWxWdDwjWeaiUZaEfBmTSuu0VGnvQT0"
 
 echo "$user"
 ../general_setups/new_user.sh "$user" "$pwd"

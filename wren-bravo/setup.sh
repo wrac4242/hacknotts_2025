@@ -2,8 +2,8 @@ echo "python3 ~/scripts/wren_bravo.py > ~/logs/out/wren_bravo.txt 2> ~/logs/out/
 cp listening_script.py /home/background_scripts/scripts/wren_bravo.py
 chown background_scripts:background_scripts /home/background_scripts/scripts/wren_bravo.py
 
-user="wren-bravo"
-pwd="wren-bravo"
+user="temp07"
+pwd="KQLcUucMEGu4IpEejaSmD4aHqjpcuDgB"
 
 echo "$user"
 ../general_setups/new_user.sh "$user" "$pwd"

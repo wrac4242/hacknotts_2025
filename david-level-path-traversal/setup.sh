@@ -1,9 +1,9 @@
 #! /bin/bash
 #put the user of the next level here
-user="pathing"
-pwd="ilikemesomeflowers"
+user="temp02"
+pwd="l6YaJIlR0Gcz1zt5a2RJ4wOu9yd8WbIV"
 
-nxtUser="wren-alpha"
+nxtUser="temp03"
 
 ../general_setups/new_user.sh "$user" "$pwd"
 

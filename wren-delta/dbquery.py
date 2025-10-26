@@ -1,7 +1,7 @@
 import sqlite3
 import sys
 
-NEXT_USER = "wren-alpha"
+NEXT_USER = "temp05"
 
 # preamble
 con = sqlite3.connect("people.db")
