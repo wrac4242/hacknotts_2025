@@ -1,7 +1,7 @@
 #! /bin/bash
 #put the user of the next level here
 user="pathing"
-pwd="pathing"
+pwd="ilikemesomeflowers"
 
 nxtUser="wren-alpha"
 
