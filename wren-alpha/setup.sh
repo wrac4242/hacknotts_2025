@@ -3,10 +3,7 @@ cp listening_script.py /home/background_scripts/scripts/wren_alpha.py
 chown background_scripts:background_scripts /home/background_scripts/scripts/wren_alpha.py
 
 user="temp01"
-pwd="temp01"
 
-echo "$user"
-../general_setups/new_user.sh "$user" "$pwd"
 
 cp README.md /home/$user
 chown $user:$user /home/$user/README.md

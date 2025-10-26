@@ -3,10 +3,7 @@ cp listening_script.py /home/background_scripts/scripts/wren_bravo.py
 chown background_scripts:background_scripts /home/background_scripts/scripts/wren_bravo.py
 
 user="temp07"
-pwd="KQLcUucMEGu4IpEejaSmD4aHqjpcuDgB"
 
-echo "$user"
-../general_setups/new_user.sh "$user" "$pwd"
 
 cp README.md /home/$user
 chown $user:$user /home/$user/README.md

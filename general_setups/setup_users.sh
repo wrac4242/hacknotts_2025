@@ -1,0 +1,11 @@
+#! /bin/bash
+
+./new_user.sh "temp01" "temp01"
+./new_user.sh "temp02" "l6YaJIlR0Gcz1zt5a2RJ4wOu9yd8WbIV"
+./new_user.sh "temp03" "heYm8vi1ykKvqyt3wkD75iojk4Gm3ias"
+./new_user.sh "temp04" "ba70fca74e9687f79ac3ea495eea81c1e02785ac45c89db388599938e3c2d0d5"
+./new_user.sh "temp05" "26d87ec38a54300635add88dd39d4cacefe3d64434d0df273deccfa3c25dd776"
+./new_user.sh "temp06" "1b3aaa478102ca2536adb375a42833cdfa9373ae5521549429f0d19bfd07e7c9"
+./new_user.sh "temp07" "KQLcUucMEGu4IpEejaSmD4aHqjpcuDgB"
+./new_user.sh "temp08" "EmWxWdDwjWeaiUZaEfBmTSuu0VGnvQT0"
+./new_user.sh "temp09" "oD9UDytDkvynaiBnm0AP4tt2LRRj4cqs"

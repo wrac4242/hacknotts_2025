@@ -1,9 +1,8 @@
 user="temp06"
-pwd="1b3aaa478102ca2536adb375a42833cdfa9373ae5521549429f0d19bfd07e7c9"
+
 next_user="temp07"
 
-echo "$user"
-../general_setups/new_user.sh "$user" "$pwd"
+
 
 gcc database_query.c -o next_password_generator
 rm people.db

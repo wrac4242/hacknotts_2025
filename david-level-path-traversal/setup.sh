@@ -1,11 +1,11 @@
 #! /bin/bash
 #put the user of the next level here
 user="temp02"
-pwd="l6YaJIlR0Gcz1zt5a2RJ4wOu9yd8WbIV"
+
 
 nxtUser="temp03"
 
-../general_setups/new_user.sh "$user" "$pwd"
+.
 
 # This file compiles the faulty c program and sets the suid bit to the correct user
 
