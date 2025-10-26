@@ -12,3 +12,5 @@ echo "$user"
 ../general_setups/new_user.sh "$user" "$pwd"
 
 mkdir /tmp/listening_to_you
+chown background_scripts:background_scripts /tmp/listening_to_you
+chmod 777 /tmp/listening_to_you
