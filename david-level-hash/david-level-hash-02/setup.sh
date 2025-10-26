@@ -1,7 +1,7 @@
 #! /bin/bash
 #put the user of the next level here
 user="temp04"
-pwd="d847cf087ab2b5ebdffded4a2e874ecbe5896395ff9ea806cf35148f841d68bb"
+pwd="ba70fca74e9687f79ac3ea495eea81c1e02785ac45c89db388599938e3c2d0d5"
 
 echo "$user"
 ../../general_setups/new_user.sh "$user" "$pwd"

@@ -2,7 +2,7 @@ import secrets
 
 tokens = []
 
-for i in range(100):
+for i in range(10):
     s = secrets.token_hex(nbytes=32)
     tokens.append(s)
 
