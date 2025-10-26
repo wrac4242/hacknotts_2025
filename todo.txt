@@ -1,10 +1,9 @@
-automatic setups
-
 documentation - e.g. where to find current user passwords
 
 level names - change later once polished
 medievil name
 knight? - here be dragons
+goblin
 naming them after famous dragons from mythology 
 Elegy of the soul
 
@@ -16,5 +15,5 @@ instructions as text
 password changes
 
 level ideas: 
-hashes one forcing Automation
+- hashes one forcing Automation
 hashing - passwords are guessable even with prefix
