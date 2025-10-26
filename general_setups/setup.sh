@@ -25,9 +25,9 @@ chmod -R 0644 /etc/update-motd.d/
 
 # Add any MOTD updates?
 
-to_run="mkdir /tmp/listening_to_you
-chown background_scripts:background_scripts /tmp/listening_to_you
-chmod 777 /tmp/listening_to_you"
+to_run="mkdir /tmp/listening_to_you; 
+chown background_scripts:background_scripts /tmp/listening_to_you;
+chmod 777 /tmp/listening_to_you;"
 
 $to_run > /root/startup.sh
 chmod +x /root/startup.sh

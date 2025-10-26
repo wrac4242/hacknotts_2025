@@ -8,14 +8,6 @@ echo "pip install inotify-simple --break-system-packages" >> /home/background_sc
 user="temp08"
 pwd="EmWxWdDwjWeaiUZaEfBmTSuu0VGnvQT0"
 
-echo "$user"
-../general_setups/new_user.sh "$user" "$pwd"
-
-mkdir /tmp/listening_to_you
-
-chown background_scripts:background_scripts /tmp/listening_to_you
-
-chmod 777 /tmp/listening_to_you
 
 cp README.md /home/$user
 chown $user:$user /home/$user/README.md
