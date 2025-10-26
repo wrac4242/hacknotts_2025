@@ -1,6 +1,6 @@
 #! /bin/bash
 #put the user of the next level here
-user="hashing2"
+user="hash2"
 pwd="hashbr0wns"
 
 echo "$user"
