@@ -1,5 +1,5 @@
 #! /bin/bash
-user="wren-alpha"
+user="temp01"
 
 ../general_setups/new_user.sh "$user" "" 1
 

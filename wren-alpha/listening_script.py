@@ -4,7 +4,7 @@ from threading import Thread
 
 HOST = "127.0.0.1"  # Standard loopback interface address (localhost)
 PORT = 65432  # Port to listen on (non-privileged ports are > 1023)
-CURRENT_PW = "temp1".encode("utf-8")
+CURRENT_PW = "temp01".encode("utf-8")
 NEXT_PW = "l6YaJIlR0Gcz1zt5a2RJ4wOu9yd8WbIV"
 
 def on_new_client(client_socket, addr):

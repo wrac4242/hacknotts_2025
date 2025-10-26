@@ -1,5 +1,5 @@
 #! /bin/bash
-user="wren-delta"
+user="temp06"
 ../general_setups/new_user.sh "$user" "" 1
 
 rm people.db
