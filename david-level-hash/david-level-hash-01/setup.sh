@@ -9,3 +9,5 @@ echo "$user"
 cp dictionary /home/"$user"/
 cp hash /home/"$user"/
 
+cp README.md /home/$user
+chown $user:$user README.md

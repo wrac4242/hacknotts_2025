@@ -7,3 +7,6 @@ pwd="wren-alpha"
 
 echo "$user"
 ../general_setups/new_user.sh "$user" "$pwd"
+
+cp README.md /home/$user
+chown $user:$user README.md

@@ -27,3 +27,6 @@ chmod g+s /home/$user/next_password_generator
 
 chown $user:$user /home/$user/people.db
 chmod 555 /home/$user/people.db
+
+cp README.md /home/$user
+chown $user:$user README.md

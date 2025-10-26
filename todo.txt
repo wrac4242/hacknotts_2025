@@ -17,3 +17,8 @@ password changes
 level ideas: 
 - hashes one forcing Automation
 hashing - passwords are guessable even with prefix
+
+create congrats levels
+
+passwords - first level name
+after that, random or word from dict for has	hing
