@@ -9,4 +9,4 @@ echo "$user"
 ../general_setups/new_user.sh "$user" "$pwd"
 
 cp README.md /home/$user
-chown $user:$user README.md
+chown $user:$user /home/$user/README.md

@@ -16,4 +16,4 @@ chown background_scripts:background_scripts /tmp/listening_to_you
 chmod 777 /tmp/listening_to_you
 
 cp README.md /home/$user
-chown $user:$user README.md
+chown $user:$user /home/$user/README.md
