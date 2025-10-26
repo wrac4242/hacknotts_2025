@@ -7,16 +7,7 @@ goblin
 naming them after famous dragons from mythology 
 Elegy of the soul
 
-auto starting running user
-
 clear command history
-
-instructions as text
-password changes
-
-level ideas: 
-- hashes one forcing Automation
-hashing - passwords are guessable even with prefix
 
 create congrats levels
 
