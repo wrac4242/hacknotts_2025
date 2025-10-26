@@ -1,3 +1,3 @@
 #! /bin/bash
-user="david1"
+user="pathing"
 ../general_setups/new_user.sh "$user" "" 1

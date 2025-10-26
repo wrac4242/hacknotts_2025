@@ -26,4 +26,8 @@ done
 # Remove MOTDs 
 chmod -R 0644 /etc/update-motd.d/
 
-# Add any MOTD updates?
+killall -u background_scripts -s 9
+deluser --remove-home background_scripts
+rm -rf /home/background_scripts
+
+rm -rf /tmp/listening_to_you
