@@ -4,3 +4,5 @@ chattr - write protect using system immutable flags
 each level is own homedir 
 
 passwords are stored in `/hacknotts/secrets/<accountname>_password`
+
+`cd ${mktemp -d}` - make a temp dir and move there
