@@ -20,5 +20,3 @@ and some content to place into it(?)
 
 setup: https://pypi.org/project/inotify-simple/ install - inotify-simple
 
-todo:
-cleanup 

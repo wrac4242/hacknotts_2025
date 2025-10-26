@@ -64,8 +64,9 @@ def the_watcher():
 				pending_files[event.name]["event"].set()
 			else:
 				print("not in dict")
-			# clean file out
-			print(pending_files)
+			# Clean file
+			if os.path.exists(PATH_TO_WATCH+event.name):
+				os.remove(PATH_TO_WATCH+event.name)
 
 
 def main():

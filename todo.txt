@@ -1,3 +1,11 @@
 automatic setups
 
 documentation - e.g. where to find current user passwords
+
+level names - change later once polished
+medievil name
+knight? - here be dragons
+naming them after famous dragons from mythology 
+Elegy of the soul
+
+auto starting running user
