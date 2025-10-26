@@ -1,3 +1,3 @@
 #! /bin/bash
-user="hash1"
+user="temp03"
 ../../general_setups/new_user.sh "$user" "" 1
