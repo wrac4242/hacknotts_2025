@@ -17,9 +17,10 @@ fi
 
 
 # set up the permission
-echo "setup perms"
-sudo chown "$nxtUser:$nxtUser" lookup-project/lookup
-sudo chmod 101 lookup-project/lookup
-sudo chmod u+s lookup-project/lookup
 
-cp -r lookup-project /home/"$user"/
+cp -r lookup-project/* /home/$user/
+
+echo "setup perms"
+chown "$nxtUser:$nxtUser" /home/$user/lookup
+chmod 555 /home/$user/lookup
+chmod g+s /home/$user/lookup
