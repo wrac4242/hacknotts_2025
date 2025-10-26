@@ -1,5 +1,5 @@
-user="wren-delta"
-pwd="wren-delta"
+user="temp04"
+pwd="1b3aaa478102ca2536adb375a42833cdfa9373ae5521549429f0d19bfd07e7c9"
 next_user="wren-alpha"
 
 echo "$user"
